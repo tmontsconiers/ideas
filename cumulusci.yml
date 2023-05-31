@@ -1,0 +1,25 @@
+minimum_cumulusci_version: '3.76.0'
+project:
+    name: ideas
+    package:
+        name: ideas
+        api_version: '55.0'
+    git:
+        default_branch: 'main'
+    source_format: sfdx
+
+tasks:
+    robot:
+        options:
+            suites: robot/ideas/tests
+            options:
+                outputdir: robot/ideas/results
+
+    robot_testdoc:
+        options:
+            path: robot/ideas/tests
+            output: robot/ideas/doc/ideas_tests.html
+
+    run_tests:
+        options:
+            required_org_code_coverage_percent: 95
